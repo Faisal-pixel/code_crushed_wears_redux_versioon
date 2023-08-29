@@ -4,8 +4,6 @@ import { Outlet } from "react-router-dom"
 
 import CartIcon from "../../components/cart-icon/cart-icon.component"
 import CartDropDown  from "../../components/cart-dropdown/cart-dropdown.component"
-
-import { UserContext } from "../../contexts/user.context"
 import {ReactComponent as CrwnLogo} from "../../assets/crown.svg"
 import { NavigationContainer, LogoContainer, NavLinks, NavLink } from "./navigation.styles"
 import { signOutUser } from "../../utils/firebase/firebase.utils"

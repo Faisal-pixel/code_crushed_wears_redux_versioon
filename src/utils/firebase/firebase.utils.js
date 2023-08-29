@@ -61,7 +61,6 @@ const firebaseConfig = {
       accumulator[title.toLowerCase()] = items;
       return accumulator
     }, {})
-
     return categoryMap
   }
 
