@@ -56,12 +56,7 @@ const firebaseConfig = {
     const collectionRef = collection(db, "categories");
     const q = query(collectionRef);
     const querySnapshots = await getDocs(q);
-    const categoryMap = querySnapshots.docs.reduce((accumulator, docSnapshot) => {
-      const { title, items } = docSnapshot.data();
-      accumulator[title.toLowerCase()] = items;
-      return accumulator
-    }, {})
-    return categoryMap
+    return querySnapshots.docs.map(docSnapshot => docSnapshot.data())
   }
 
   export const createUserDocumentFromAuth = async (userAuth, additionalInformation) => {
